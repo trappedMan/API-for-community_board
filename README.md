@@ -23,5 +23,18 @@ tzdata==2023.3
 whitenoise==6.4.0
 ```
 
+API URLs
+```
+users/register/ -> POST (JSON "username","password","password2","email"). Basic Validation exists
+users/login/ -> POST (JSON "username", "password") -> return 'token'
+users/profile/<pk>/ -> GET -> return the profile
+users/profile/<pk>/ -> PUT(JSON "nickname", "position", "subjects") ->update profile. Only that user can update his profile.
+posts/ -> POST (JSON "title","body","category") ->posting upload. authorized user(who send token in HTTP header) only.
+posts/ -> GET -> List all posts (filtering,pagination)
+posts/<pk>/ -> GET -> Retrieve a post.
+like/<pk>/ -> GET -> like or unlike
+comments/ -> POST(JSON "post(id)","text") -> comments for a post.
+
+```
 # 캡쳐
 <img src='./insomnia_capture.png'>
