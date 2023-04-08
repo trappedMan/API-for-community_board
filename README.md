@@ -21,6 +21,7 @@ sqlparse==0.4.3
 typing_extensions==4.5.0
 tzdata==2023.3
 whitenoise==6.4.0
+```
 
 # 캡쳐
 <img src='./insomnia_capture.png'>
